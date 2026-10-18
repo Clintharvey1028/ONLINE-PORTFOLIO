@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FolioFlow | Portfolio Studio</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head><body>
+<div id="auth" class="auth-screen"><section class="auth-card">
+  <a class="brand" href="#"><b class="logo">✦</b><span>FolioFlow<small>PORTFOLIO STUDIO</small></span></a>
+  <div class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</div><h1 id="authTitle">Welcome back.</h1><p id="authDescription">Log in to create and manage your portfolio.</p>
+  <div class="tabs"><button id="loginTab" class="tab active" type="button">Log in</button><button id="registerTab" class="tab" type="button">Create account</button></div>
+  <form id="authForm"><label id="nameField" class="hide">Full name<input id="fullName" placeholder="Your name"></label>
+  <label>Email address<input id="email" type="email" required placeholder="you@example.com"></label>
+  <label>Password<input id="password" type="password" required minlength="6" placeholder="At least 6 characters"></label>
+  <button class="primary wide" id="authSubmit">Log in to FolioFlow →</button></form>
+  <p id="authMessage" class="message hide"></p><p class="auth-note">A little space for your big ideas. ✦</p>
+</section></div>
+<header><a class="brand" href="#"><b class="logo">✦</b><span>FolioFlow<small>MAKE YOUR NEXT CHAPTER VISIBLE</small></span></a>
+<nav><button class="nav active" data-view="home">Home</button><button class="nav" data-view="manage">My portfolios</button></nav>
+<div class="account"><span id="userEmail"></span><button id="logout" class="outline hide">Log out</button></div></header>
+<main>
+<section id="home" class="view active"><div class="hero"><div><div class="eyebrow">✧ YOUR STORY, YOUR STYLE</div><h1>Make your work<br><em>stand out.</em></h1><p>Build a personal portfolio that feels like you. Add your story, choose a look, and create a page you’re proud to share.</p><button id="start" class="primary">Create my portfolio →</button><div class="proof">✓ Easy to edit　 ✓ Three unique styles</div></div>
+<div class="art"><div class="orbit"></div><div class="sheet sheet-back"><b>✧</b><i></i><i></i><i class="block"></i></div><div class="sheet sheet-front"><b>✦</b><i class="long"></i><i></i><i class="block"></i></div><span class="spark">✳</span></div></div>
+<div class="section-heading"><div><div class="eyebrow">HOW IT WORKS</div><h2>From idea to portfolio in minutes</h2></div><p>No design experience needed.</p></div>
+<div class="steps"><article class="card"><b class="tile purple">⌘</b><h3>Tell your story</h3><p>Add your background, skills, projects, and details you want people to know.</p></article><article class="card"><b class="tile green">◈</b><h3>Choose your look</h3><p>Pick Simple, Modern, or Creative to match your personality.</p></article><article class="card"><b class="tile orange">↗</b><h3>Preview and polish</h3><p>Review your portfolio, make changes, and export a shareable HTML page.</p></article></div>
+</section>
+<section id="editor" class="view"><div class="page-heading"><div><div class="eyebrow">PORTFOLIO BUILDER</div><h1>Let’s introduce you.</h1><p>Fill in what you can. You can leave fields blank and come back later.</p></div><button id="cancel" class="outline">Cancel</button></div>
+<form id="portfolioForm" class="editor"><div class="card form-card"><h2>01　Personal information</h2><div class="fields">
+<label>Full name *<input name="fullName" required placeholder="Your full name"></label><label>Professional title<input name="headline" placeholder="IT Student | Web Developer"></label>
+<label>Email<input name="contactEmail" type="email" placeholder="you@example.com"></label><label>Contact number<input name="phone" placeholder="09XX XXX XXXX"></label>
+<label class="span">Address / location<input name="address" placeholder="City, Country"></label><label class="span">Profile picture URL<input name="photo" type="url" placeholder="https://... (optional)"></label>
+<label class="span">About me<textarea name="about" rows="3" placeholder="Write a few sentences about yourself..."></textarea></label></div>
+<h2>02　Education and skills</h2><div class="fields"><label class="span">Educational background<textarea name="education" rows="2" placeholder="School, course, year level..."></textarea></label><label class="span">Skills <small>Separate skills with commas</small><input name="skills" placeholder="HTML, CSS, JavaScript, Teamwork"></label></div>
+<h2>03　Projects and experience</h2><div class="fields"><label class="span">Projects<textarea name="projects" rows="3" placeholder="Project name and what it does..."></textarea></label><label class="span">Work experience<textarea name="experience" rows="2" placeholder="Role and responsibilities (optional)"></textarea></label><label>Social / website link<input name="social" type="url" placeholder="https://..."></label><label>Portfolio title<input name="title" placeholder="My Personal Portfolio"></label></div>
+<div class="form-actions"><button type="button" id="cancel2" class="outline">Cancel</button><button class="primary">Choose a template →</button></div></div>
+<aside class="card side-note"><b class="tile purple">✦</b><h3>Your story is worth sharing.</h3><p>Start with the basics. A clear introduction and a few examples of your work are a great beginning.</p><hr><small>Tip: use sample information while testing, and avoid adding private information to a public portfolio.</small></aside></form></section>
+<section id="templates" class="view"><div class="page-heading"><div><div class="eyebrow">MAKE IT YOURS</div><h1>Choose your style.</h1><p>You can switch templates any time.</p></div><button id="back" class="outline">← Edit details</button></div>
+<div class="templates"><button data-template="simple" class="template card"><div class="sample simple"><b></b><i></i><i></i><div><span></span><span></span><span></span></div></div><h3>Simple ↗</h3><p>Clean, calm, and easy to read.</p></button><button data-template="modern" class="template card"><div class="sample modern"><aside></aside><div><b></b><i></i><i></i><span></span></div></div><h3>Modern ↗</h3><p>Confident, polished, and bold.</p></button><button data-template="creative" class="template card"><div class="sample creative"><b></b><i></i><i></i><div><span></span><span></span><span></span></div></div><h3>Creative ↗</h3><p>Expressive, playful, and original.</p></button></div></section>
+<section id="preview" class="view"><div class="page-heading"><div><div class="eyebrow">YOUR PORTFOLIO</div><h1>Looking good.</h1><p>Preview your page, then save it to your account.</p></div><div class="heading-actions"><button id="editDetails" class="outline">Edit details</button><button id="save" class="primary">Save portfolio</button></div></div><div id="previewBox"></div><div class="form-actions"><button id="download" class="outline">Export HTML</button><button id="changeTemplate" class="outline">Change template</button><button id="save2" class="primary">Save portfolio</button></div></section>
+<section id="manage" class="view"><div class="page-heading"><div><div class="eyebrow">YOUR WORKSPACE</div><h1>My portfolios.</h1><p>Your saved work, all in one place.</p></div><button id="new" class="primary">+ New portfolio</button></div><div id="list" class="saved-grid"></div></section>
+</main><footer><a class="brand" href="#"><b class="logo">✦</b><span>FolioFlow<small>YOUR STORY, BEAUTIFULLY PRESENTED</small></span></a><p>Made for your next big thing. ✦</p></footer><div id="toast" class="toast"></div><script src="script.js"></script></body></html>
